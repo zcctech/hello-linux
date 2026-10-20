@@ -1,13 +1,11 @@
 CC=gcc
-Process=one.exe
+process=proc.exe
 arc=$(wildcard *.c)
 obj=$(arc:.c=.o)
-
-$(Process):$(obj)
-	$(CC) $^ -o $@
+$(process):$(obj)
+	$(CC) -o $@ $^
 %.o:%.c
-	%(CC) -c $< -o $@
+	$(CC) -c $< -o $@
 .PHONY:clean
 clean:
-	rm -f $(obj)  $(Process) 
-
+	rm -f $(obj) $(process)
