@@ -1,4 +1,4 @@
-BIN=proc.exe
+IN=proc.exe
 CC=gcc
 SRC=$(wildcard *.c)
 OBJ=$(SRC:.c=.o)
